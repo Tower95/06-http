@@ -1,13 +1,15 @@
-import {saludar} from './js/components';
-import  './styles.css';
 
-const nombre = 'Ismael';
+const joke = 'https://api.chucknorris.io/jokes/random'
 
-saludar(nombre);
+fetch(joke).then( (rest) =>
+    rest.json()
+      .then(({id,value})=>{
 
+        console.log(value);
+        console.log(id);
 
-
-
+      }) 
+) 
 
 
 
