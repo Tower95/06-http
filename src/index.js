@@ -1,17 +1,5 @@
 
-const joke = 'https://api.chucknorris.io/jokes/random'
+import { getJoke } from "./js/http-provider";
 
-// fetch(joke).then( (rest) =>
-//     rest.json()
-//       .then(({id,value})=>{
-//         console.log(value);
-//         console.log(id);
-//       }) 
-// ) 
-
-fetch(joke)
-  .then(rest => rest.json())
-  .then( ({id,value}) => {
-    console.log(id,value)
-  });
-
+getJoke()
+  .then(console.log)
