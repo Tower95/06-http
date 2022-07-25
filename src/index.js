@@ -1,5 +1,4 @@
+'use strict'
+import { init } from "./js/joke-page"
 
-import { getJoke } from "./js/http-provider";
-
-getJoke()
-  .then(console.log)
+init();

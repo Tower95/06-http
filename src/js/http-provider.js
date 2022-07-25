@@ -10,9 +10,8 @@ const getJoke = async () => {
 
     if (!rest.ok) throw `Can't did request`;
 
-    const { url_icon, id, value } = await rest.json();
-
-    return { url_icon, id, value };
+    const { icon_url, id, value } = await rest.json();
+    return {icon_url, id, value };
 
   } catch (err) {
 
