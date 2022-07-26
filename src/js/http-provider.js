@@ -1,6 +1,7 @@
 'use strict'
 
 const jokeURL = 'https://api.chucknorris.io/jokes/random'
+const urlUsuarios = 'https://reqres.in/api/users?page=2';
 
 const getJoke = async () => {
 
@@ -20,6 +21,15 @@ const getJoke = async () => {
 
 }
 
+const getUsers = async () => {
+  
+  const resp = await fetch(urlUsuarios);
+  const {data:users} = await resp.json();
+
+  return users;
+}
+
 export {
-  getJoke
+  getJoke,
+  getUsers
 }
